@@ -16,6 +16,15 @@
 		8AC293002C675A0900CA6C96 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC292FF2C675A0900CA6C96 /* RingView.swift */; };
 		8AC293032C676DC900CA6C96 /* CustomShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC293022C676DC900CA6C96 /* CustomShadow.swift */; };
 		8AC293052C6771D600CA6C96 /* FoodElementValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC293042C6771D600CA6C96 /* FoodElementValue.swift */; };
+		8AC293072C67ECB900CA6C96 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC293062C67ECB900CA6C96 /* TabView.swift */; };
+		8AC2930A2C67ED2E00CA6C96 /* SelectedFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC293092C67ED2E00CA6C96 /* SelectedFood.swift */; };
+		8AC2930C2C67ED5B00CA6C96 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2930B2C67ED5B00CA6C96 /* Tab.swift */; };
+		8AC2930E2C6897F800CA6C96 /* FoodCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2930D2C6897F800CA6C96 /* FoodCardView.swift */; };
+		8AC293112C689C2E00CA6C96 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC293102C689C2E00CA6C96 /* Elements.swift */; };
+		8AC293132C68A30F00CA6C96 /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC293122C68A30F00CA6C96 /* WaterView.swift */; };
+		8AC293152C68B4C200CA6C96 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC293142C68B4C200CA6C96 /* AddView.swift */; };
+		8AC293172C68B7EA00CA6C96 /* FoodIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC293162C68B7EA00CA6C96 /* FoodIcon.swift */; };
+		8AC2931B2C68CE1400CA6C96 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2931A2C68CE1400CA6C96 /* Values.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +38,15 @@
 		8AC292FF2C675A0900CA6C96 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		8AC293022C676DC900CA6C96 /* CustomShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShadow.swift; sourceTree = "<group>"; };
 		8AC293042C6771D600CA6C96 /* FoodElementValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodElementValue.swift; sourceTree = "<group>"; };
+		8AC293062C67ECB900CA6C96 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		8AC293092C67ED2E00CA6C96 /* SelectedFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFood.swift; sourceTree = "<group>"; };
+		8AC2930B2C67ED5B00CA6C96 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		8AC2930D2C6897F800CA6C96 /* FoodCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardView.swift; sourceTree = "<group>"; };
+		8AC293102C689C2E00CA6C96 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
+		8AC293122C68A30F00CA6C96 /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
+		8AC293142C68B4C200CA6C96 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		8AC293162C68B7EA00CA6C96 /* FoodIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodIcon.swift; sourceTree = "<group>"; };
+		8AC2931A2C68CE1400CA6C96 /* Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +83,12 @@
 				8A1D5DDA2C6660810058C0C6 /* Assets.xcassets */,
 				8A1D5DD62C66607E0058C0C6 /* CaloricTrackingAppApp.swift */,
 				8AC292FD2C67502E00CA6C96 /* CDDataModel.swift */,
+				8AC293082C67ED1500CA6C96 /* Tab */,
 				8AC292FA2C673A8C00CA6C96 /* CDFoodClass.xcdatamodeld */,
 				8A1D5DD82C66607E0058C0C6 /* ContentView.swift */,
 				8A1D5DDC2C6660810058C0C6 /* Preview Content */,
 				8AC292FF2C675A0900CA6C96 /* RingView.swift */,
+				8AC2930F2C689BE900CA6C96 /* Components */,
 				8AC293042C6771D600CA6C96 /* FoodElementValue.swift */,
 			);
 			path = CaloricTrackingApp;
@@ -88,6 +108,29 @@
 				8AC293022C676DC900CA6C96 /* CustomShadow.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8AC293082C67ED1500CA6C96 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				8AC293062C67ECB900CA6C96 /* TabView.swift */,
+				8AC293092C67ED2E00CA6C96 /* SelectedFood.swift */,
+				8AC2930B2C67ED5B00CA6C96 /* Tab.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		8AC2930F2C689BE900CA6C96 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8AC2930D2C6897F800CA6C96 /* FoodCardView.swift */,
+				8AC293102C689C2E00CA6C96 /* Elements.swift */,
+				8AC293122C68A30F00CA6C96 /* WaterView.swift */,
+				8AC293142C68B4C200CA6C96 /* AddView.swift */,
+				8AC293162C68B7EA00CA6C96 /* FoodIcon.swift */,
+				8AC2931A2C68CE1400CA6C96 /* Values.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,11 +203,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AC293152C68B4C200CA6C96 /* AddView.swift in Sources */,
+				8AC293172C68B7EA00CA6C96 /* FoodIcon.swift in Sources */,
+				8AC2930E2C6897F800CA6C96 /* FoodCardView.swift in Sources */,
 				8AC293052C6771D600CA6C96 /* FoodElementValue.swift in Sources */,
+				8AC293132C68A30F00CA6C96 /* WaterView.swift in Sources */,
+				8AC293112C689C2E00CA6C96 /* Elements.swift in Sources */,
 				8AC293032C676DC900CA6C96 /* CustomShadow.swift in Sources */,
+				8AC2931B2C68CE1400CA6C96 /* Values.swift in Sources */,
+				8AC293072C67ECB900CA6C96 /* TabView.swift in Sources */,
 				8AC293002C675A0900CA6C96 /* RingView.swift in Sources */,
 				8A1D5DD92C66607E0058C0C6 /* ContentView.swift in Sources */,
 				8AC292FC2C673A8C00CA6C96 /* CDFoodClass.xcdatamodeld in Sources */,
+				8AC2930A2C67ED2E00CA6C96 /* SelectedFood.swift in Sources */,
+				8AC2930C2C67ED5B00CA6C96 /* Tab.swift in Sources */,
 				8AC292FE2C67502E00CA6C96 /* CDDataModel.swift in Sources */,
 				8A1D5DD72C66607E0058C0C6 /* CaloricTrackingAppApp.swift in Sources */,
 			);
