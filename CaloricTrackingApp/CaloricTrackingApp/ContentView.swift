@@ -33,7 +33,103 @@ struct ContentView: View {
 
                 TabView(selectedItem: $selectedItem)
 
+                if selectedItem == .breakfast {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 10) {
+                            ForEach(dataModel.saveBreakfastEntity) { item in
+                                FoodCardView(
+                                    width: 200,
+                                    title: item.ingredients ?? "",
+                                    imageName: item.imageName ?? "",
+                                    cards: CGFloat(item.cards),
+                                    protein: CGFloat(item.protein),
+                                    fat: CGFloat(item.fat),
+                                    name: item.name ?? "",
+                                    icon: item.icon ?? ""
+                                )
+                                    .padding(.leading)
+                                    .overlay(alignment: .topTrailing) {
+                                        Button {
+                                            dataModel.addValue(
+                                                fat: CGFloat(item.fat),
+                                                protein: CGFloat(item.protein),
+                                                cards: CGFloat(
+                                                    item.cards
+                                                )
+                                            )
+
+                                            dataModel.addBreakfastToggle(breakfast: item)
+                                            dataModel.addCalories(calories: CGFloat(item.cards))
+                                        } label: {
+                                            ZStack {
+                                                Circle()
+                                                    .frame(width: 30, height: 30)
+                                                Image(systemName: item.addmale ? "checkmark" : "plus")
+                                                    .imageScale(.small)
+                                                    .foregroundStyle(.black)
+                                            }
+                                            .customShadow()
+                                        }
+                                        .offset(x: -5, y: 5)
+                                    }
+                            }
+                        }
+                        .frame(height: 180)
+                    }
+                    .offset(y: -30)
+                } else if selectedItem == .lunch {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 10) {
+                            ForEach(dataModel.saveLunchEntity) { item in
+                                FoodCardView(
+                                    width: 200,
+                                    title: item.ingredients ?? "",
+                                    imageName: item.imageName ?? "",
+                                    cards: CGFloat(item.cards),
+                                    protein: CGFloat(item.protein),
+                                    fat: CGFloat(item.fat),
+                                    name: item.name ?? "",
+                                    icon: item.icon ?? ""
+                                )
+                                    .padding(.leading)
+                                    .overlay(alignment: .topTrailing) {
+                                        Button {
+
+                                        } label: {
+                                            ZStack {
+                                                Circle()
+                                                    .frame(width: 30, height: 30)
+                                            }
+                                            .customShadow()
+                                        }
+                                        .offset(x: -5, y: 5)
+                                    }
+                            }
+                        }
+                        .frame(height: 180)
+                    }
+                }
+
                 WaterView()
+
+                Spacer()
+                    .overlay(alignment: .bottomLeading) {
+                        Button {
+                            show.toggle()
+                        } label: {
+                            Text("New meat")
+                                .bold()
+                                .foregroundStyle(.black)
+                                .frame(width: 150, height: 56)
+                                .background(.white)
+                                .clipShape(Capsule())
+                                .customShadow()
+                        }
+                        .padding()
+                    }
+                    .sheet(isPresented: $show, content: {
+                        AddView()
+                    })
             }
         }
     }

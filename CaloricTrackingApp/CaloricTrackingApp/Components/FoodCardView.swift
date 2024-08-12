@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct FoodCardView: View {
-    let title: String
-    let imageName: String
-    let width: CGFloat = 40
+    var width: CGFloat
+    var title: String
+    var imageName: String
     var multiplier: CGFloat {
         width / 200
     }
 
-    @State private var cards: CGFloat = 20
-    @State private var protein: CGFloat = 100
-    @State private var fat: CGFloat = 70
-    @State private var name: String = ""
-    @State private var icon: String = ""
-    @State private var nane: String = ""
+    @State var cards: CGFloat = 20
+    @State var protein: CGFloat = 100
+    @State var fat: CGFloat = 70
+    @State var name: String = ""
+    @State var icon: String = ""
 
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
@@ -64,5 +63,5 @@ struct FoodCardView: View {
 }
 
 #Preview {
-    FoodCardView(title: "cola", imageName: "cola")
+    FoodCardView(width: 12, title: "cola", imageName: "cola")
 }

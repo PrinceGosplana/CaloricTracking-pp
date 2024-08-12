@@ -102,6 +102,9 @@ final class CDDataModel: ObservableObject {
             let results = try container.viewContext.fetch(newcal)
             if let entity = results.first {
                 entity.ring += Float(Int(calories))
+            } else {
+                let newEntity = ValueEntity(context: container.viewContext)
+                newEntity.ring = 10
             }
         } catch { print("\(error)")}
         saveData()
